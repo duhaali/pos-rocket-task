@@ -1,0 +1,38 @@
+.main-container {
+  .add-widget {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    mat-form-field {
+      width: 30%;
+      font-size: 20px;
+    }
+
+    mat-label {
+      margin: 0 1em;
+    }
+    mat-select {
+      mat-option {
+        border-bottom: solid 1px #9e9e99;
+      }
+    }
+    .but-add-widget {
+      width: 100px;
+      height: 50px;
+      background-color: #0a1016;
+      color: white;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+  .grid {
+    position: relative;
+    height: calc(100vh - 120px);
+
+    gridster {
+      margin: 0 auto;
+      background-color: transparent;
+    }
+  }
+}

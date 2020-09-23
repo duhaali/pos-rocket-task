@@ -1,0 +1,13 @@
+<app-widdget-a
+  *ngIf="widget.type === 0"
+  [resizeEvent]="resizeEvent"
+  [index]="index"
+></app-widdget-a>
+
+<app-widdget-b
+  *ngIf="widget.type === 1"
+  [resizeEvent]="resizeEvent"
+  [index]="index"
+></app-widdget-b>
+
+<app-numeric-widget *ngIf="widget.type === 2"></app-numeric-widget>

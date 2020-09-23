@@ -1,0 +1,30 @@
+<main class="main-container">
+  <div class="add-widget">
+    <mat-form-field appearance="outline" title="Widget Type">
+      <mat-label>Widget Type: </mat-label>
+      <mat-select [(value)]="selectedWidget">
+        <mat-option
+          *ngFor="let widgetType of widgetTypes"
+          [value]="widgetType.id"
+        >
+          {{ widgetType.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="but-add-widget" (click)="addWiddget()">ADD</button>
+  </div>
+  <div class="grid">
+    <gridster [options]="options">
+      <gridster-item
+        [item]="widget"
+        *ngFor="let widget of widgets; let index = index"
+      >
+        <app-parent-dynamic
+          [widget]="widget"
+          [resizeEvent]="resizeEvent"
+          [index]="index"
+        ></app-parent-dynamic>
+      </gridster-item>
+    </gridster>
+  </div>
+</main>
